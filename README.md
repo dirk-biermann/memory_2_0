@@ -1,2 +1,2 @@
 # memory_2_0
-Memory Game
+Memory Game 2.0
