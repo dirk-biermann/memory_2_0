@@ -1,0 +1,82 @@
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3.0rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2.0rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.0rem; }
+
+p { font-size: 1.5rem; }
+
+.txtShadow { text-shadow: 0px 0px 20px #B7B7B7; }
+.boxShadow { box-shadow:0px 0px 45px 20px #B7B7B755; }
+
+#area {
+    padding: 40px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+}
+
+#area #control {
+    padding-right:20px;
+}
+
+#memory-board { 
+    background-color: #191919;
+    width: 450px;
+    max-width: 450px;
+    margin: 10px 10px 10px 30px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#memory-time,
+#memory-score{
+    font-size: 2rem;
+    background-color: #ffffffcc;
+    padding: 10px 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #606060;
+}
+
+.memory-btn {
+    font-size: 2rem;
+    background-color: #909090;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 6px #FFFFFF44;
+    cursor: pointer;
+}
+
+.memory-btn:hover {
+    background-color: #606060; 
+    box-shadow: 0 6px #FFFFFF22;
+}
+
+.memory-btn, 
+.memory-btn:hover,
+.memory-btn:focus,
+.memory-btn:active {
+    outline: none;
+}
+
+
+.bkgcolor { background-color: #fff; }
+.fish { margin-left: 30px; }
+
+
+

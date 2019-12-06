@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/memory.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/basic.css"/>    
+    <link rel="stylesheet" type="text/css" href="./css/memory.css" media="screen"/>    
+    <title>Memory 2.0</title>
+</head>
+
+<body">
+    <div class="flex-center h-100pc w-100pc">
+        <div id="area" class="boxShadow">
+            <header>
+                <h1 class="txtShadow"><i>MEMORY 2.0</i></h1>
+                <h4>Remember and collect the right card pairs to win</h4>
+                <hr>
+            </header>
+            <section class="flex flex-row-c-c">
+                <div id="memory-game">
+                    <div id="instruction">
+                        <p>Select 2 cards and see if they match.</p><br>
+                        <p>If not click any card to hide the open ones<br>
+                           and start next try!</p><br>
+                        <hr>
+                        <p>If all pairs were found, you win!</p>
+                    </div>
+                    <hr style="display: none;">
+                    <div class="flex flex-row-c-c just-cont-sb" style="display: none;">
+                        <div id="memory-time">TIME: <span>00:00</span></div>
+                        <div id="memory-score">SCORE: <span>00</span></div>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row-c-c just-cont-sb">
+                        <div id="memory-control" class="memory-btn">START</div>
+                    </div>
+                </div>
+                <div id="memory-board">
+                    <div class="memory-card" data-id="1"></div>
+                    <div class="memory-card" data-id="2"></div>
+                    <div class="memory-card" data-id="3"></div>
+                    <div class="memory-card" data-id="4"></div>
+                    <div class="memory-card" data-id="5"></div>
+                    <div class="memory-card" data-id="6"></div>
+                    <div class="memory-card" data-id="7"></div>
+                    <div class="memory-card" data-id="8"></div>
+                    <div class="memory-card" data-id="9"></div>
+                    <div class="memory-card" data-id="10"></div>
+                    <div class="memory-card" data-id="11"></div>
+                    <div class="memory-card" data-id="12"></div>
+                    <div class="memory-card" data-id="13"></div>
+                    <div class="memory-card" data-id="14"></div>
+                    <div class="memory-card" data-id="15"></div>
+                    <div class="memory-card" data-id="16"></div>
+                </div>
+            </section>
+            <footer>
+                <hr>
+                <div class="flex-row-c-c">
+                    <p>(c) 2019 by D.W.B </p>
+                    <img class="bkgcolor fish" src="./images/piranhia_mask.png" alt="piranhia">    
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
