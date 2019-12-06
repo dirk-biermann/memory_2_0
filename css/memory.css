@@ -32,15 +32,27 @@ p { font-size: 1.5rem; }
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
 }
 
 #memory-time,
-#memory-score{
+#memory-tries{
     font-size: 2rem;
     background-color: #ffffffcc;
     padding: 10px 10px;
     color: #000000;
     font-weight: bold;
+}
+
+#memory-result {
+    width: 100%;
+    height: 100%;
+    background-color: #00FF0078;
+    border: 5px solid #ffffff;
+    font-size: 5rem;
+}
+#memory-result p {
+    font-size: 5rem;
 }
 
 .memory-card {

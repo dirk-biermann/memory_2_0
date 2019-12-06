@@ -81,25 +81,45 @@ class Memory{
         this.interval = null;
         
         this.runTime = 0;
+        this.triesCount = 0;
 
         this.initCards();
     }
 
     startGame(){
-        // bind func 'updateIslandRacerState' to be available in 'setInterval()'
-        this.runTime = 0;
+        this.runTime = -1;
+        this.triesCount = -1;
         this.isStopped = false;
-        //this.interval = setInterval(this.updateTime, 1000);
+
+        this.updateTries();
+        this.updateTime();
+
+        // bind func 'updateRooms' to be available in 'setInterval()'
+        this.updateTime = this.updateTime.bind(this);
+        this.interval = setInterval(this.updateTime, 1000);
     }
 
     stopGame(){
         this.isStopped = true;
-        //clearInterval(this.interval);
+        clearInterval(this.interval);
+    }
+
+    updateTries(){
+        this.triesCount++;
+        let tries = `${this.triesCount.padDigits(3)}`;
+        document.querySelector("#memory-tries span").innerText = tries;
     }
 
     updateTime(){
-        let time = `${Number(Math.floor(this.runTime/60)).padDigits(2)}:${Number(Math.floor(this.runTime%60)).padDigits(2)}`;
+        this.runTime++;
+        let time_min = Math.floor(this.runTime/60).padDigits(2);
+        let time_sec = Math.floor(this.runTime%60).padDigits(2);
+        let time = `${time_min}:${time_sec}`;
         document.querySelector("#memory-time span").innerText = time;
+    }
+
+    displayWin( show ){
+        document.querySelector( "#memory-result" ).style.display = (show ? "flex" : "none");
     }
 
     startNewMemory() {
@@ -110,9 +130,11 @@ class Memory{
     resetCards(){
         this.fillCardsRandom();
 
+        this.displayWin(false);
+
         this.cardList.map( card => { card.displayMode = card.MODE.HIDE; card.update(); } );
 
-        this.isStopped = false;
+        this.isStopped = true;
         this.waitForClick = false;
         this.cardsOpen = 0;
         this.cardsLeft = 16;
@@ -156,11 +178,14 @@ class Memory{
         }
 
         if( this.cardsOpen === 2 ) { // check on match 
+            this.updateTries();
             if( this.checkCards() ) {
                 this.waitForClick = true;
-                this.sleep(1000).then( () => { this.clearSelectedCards(); } );
-
+                this.clearSelectedCards();
                 this.stopGame();
+
+                this.displayWin(true);
+
                 return;
             }
             this.cardsOpen++;

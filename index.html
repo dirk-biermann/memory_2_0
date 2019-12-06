@@ -27,10 +27,10 @@
                         <hr>
                         <p>If all pairs were found, you win!</p>
                     </div>
-                    <hr style="display: none;">
-                    <div class="flex flex-row-c-c just-cont-sb" style="display: none;">
+                    <hr style="display: xnone;">
+                    <div class="flex flex-row-c-c just-cont-sb" style="display: xnone;">
                         <div id="memory-time">TIME: <span>00:00</span></div>
-                        <div id="memory-score">SCORE: <span>00</span></div>
+                        <div id="memory-tries">TRIES: <span>000</span></div>
                     </div>
                     <hr>
                     <div class="flex flex-row-c-c just-cont-sb">
@@ -54,6 +54,9 @@
                     <div class="memory-card" data-id="14"></div>
                     <div class="memory-card" data-id="15"></div>
                     <div class="memory-card" data-id="16"></div>
+                    <div id="memory-result" class="overlay flex-center" style="display: none;">
+                        <p>YOU MADE IT!</p>
+                    </div>
                 </div>
             </section>
             <footer>
